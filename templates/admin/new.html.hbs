@@ -1,0 +1,30 @@
+<h1>Rocket Form Kitchen Sink</h1>
+
+<form action="/admin/post" method="post" accept-charset="utf-8">
+    <label>Titre
+        <input type="text" name="title" />
+    </label><br /><br />
+
+    <label>Poste
+        <input type="text" name="post" />
+    </label><br /><br />
+
+
+    <label>Catégorie
+        <select name="category">
+            <option value="a">Value A</option>
+            <option value="b" selected>Value B</option>
+            <option value="c">Value C</option>
+        </select>
+    </label>
+    <br /><br />
+
+    <label>Submit:
+        <input type="submit" value="Login">
+    </label>
+    <br /><br />
+</form>
+
+{{#each categories as |category| ~}}
+    <li>{{category.name}}</li>
+{{/each~}}
